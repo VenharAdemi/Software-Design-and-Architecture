@@ -1,0 +1,12 @@
+Unfiltered data exported from: https://overpass-turbo.eu/ using query:
+node
+  [amenity=hospital]
+  ({{bbox}});
+out;
+
+Filtered data using R studio with commands:
+
+df <- read.csv(file.choose())
+keeps <- c("latitude","longitude", "name", "addr.city", "addr.housenumber", "addr.postcode", "addr.street");
+df = df[keeps]
+write.csv(df, "C:\\Users\\Venhar\\Desktop\\homework1\\ItalyHospitals.csv")
